@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F8B5A5DB-F996-4C53-9E30-A8A9534CCB7D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sirona.Utilities</RootNamespace>
+    <AssemblyName>Sirona.Utilities</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Collection\ComparisonComparer.cs" />
+    <Compile Include="Collection\SortExtensions.cs" />
+    <Compile Include="Compression\BZip2\BZip2.cs" />
+    <Compile Include="Compression\BZip2\BZip2Constants.cs" />
+    <Compile Include="Compression\BZip2\BZip2Exception.cs" />
+    <Compile Include="Compression\BZip2\BZip2InputStream.cs" />
+    <Compile Include="Compression\BZip2\BZip2OutputStream.cs" />
+    <Compile Include="Compression\Checksums\Adler32.cs" />
+    <Compile Include="Compression\Checksums\CRC32.cs" />
+    <Compile Include="Compression\Checksums\IChecksum.cs" />
+    <Compile Include="Compression\Checksums\StrangeCRC.cs" />
+    <Compile Include="Compression\Compress.cs" />
+    <Compile Include="Compression\GZip\GZIPConstants.cs" />
+    <Compile Include="Compression\GZip\GZipException.cs" />
+    <Compile Include="Compression\GZip\GzipInputStream.cs" />
+    <Compile Include="Compression\GZip\GzipOutputStream.cs" />
+    <Compile Include="Compression\Main.cs" />
+    <Compile Include="Compression\Microsoft\GZipStream.cs" />
+    <Compile Include="Compression\SharpZipBaseException.cs" />
+    <Compile Include="Compression\Tar\InvalidHeaderException.cs" />
+    <Compile Include="Compression\Tar\TarArchive.cs" />
+    <Compile Include="Compression\Tar\TarBuffer.cs" />
+    <Compile Include="Compression\Tar\TarEntry.cs" />
+    <Compile Include="Compression\Tar\TarException.cs" />
+    <Compile Include="Compression\Tar\TarHeader.cs" />
+    <Compile Include="Compression\Tar\TarInputStream.cs" />
+    <Compile Include="Compression\Tar\TarOutputStream.cs" />
+    <Compile Include="Compression\ZipException.cs" />
+    <Compile Include="Compression\Zip\Compression\Deflater.cs" />
+    <Compile Include="Compression\Zip\Compression\DeflaterConstants.cs" />
+    <Compile Include="Compression\Zip\Compression\DeflaterEngine.cs" />
+    <Compile Include="Compression\Zip\Compression\DeflaterHuffman.cs" />
+    <Compile Include="Compression\Zip\Compression\DeflaterPending.cs" />
+    <Compile Include="Compression\Zip\Compression\Inflater.cs" />
+    <Compile Include="Compression\Zip\Compression\InflaterDynHeader.cs" />
+    <Compile Include="Compression\Zip\Compression\InflaterHuffmanTree.cs" />
+    <Compile Include="Compression\Zip\Compression\PendingBuffer.cs" />
+    <Compile Include="Compression\Zip\Compression\Streams\DeflaterOutputStream.cs" />
+    <Compile Include="Compression\Zip\Compression\Streams\InflaterInputStream.cs" />
+    <Compile Include="Compression\Zip\Compression\Streams\OutputWindow.cs" />
+    <Compile Include="Compression\Zip\Compression\Streams\StreamManipulator.cs" />
+    <Compile Include="Compression\Zip\ZipConstants.cs" />
+    <Compile Include="Compression\Zip\ZipEntry.cs" />
+    <Compile Include="Compression\Zip\ZipFile.cs" />
+    <Compile Include="Compression\Zip\ZipInputStream.cs" />
+    <Compile Include="Compression\Zip\ZipOutputStream.cs" />
+    <Compile Include="Data\DataHelpers.cs" />
+    <Compile Include="Encryption\BinaryKeyVectorPair.cs" />
+    <Compile Include="Encryption\EncryptionUtility.cs" />
+    <Compile Include="ExceptionHandling\ExceptionUtility.cs" />
+    <Compile Include="Install\SironaInstallerBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Install\InstallConfigurationProperties.cs" />
+    <Compile Include="Mail\NetMailException.cs" />
+    <Compile Include="Mail\NetMailManager.cs" />
+    <Compile Include="Mail\NetMailTemplate.cs" />
+    <Compile Include="Security\SecurityUtility.cs" />
+    <Compile Include="Serialization\ObjectUtility.cs" />
+    <Compile Include="IO\FileUtility.cs" />
+    <Compile Include="Strings\DateHelpers.cs" />
+    <Compile Include="Encryption\Encrypt.cs" />
+    <Compile Include="IO\FileHelpers.cs" />
+    <Compile Include="Logging\Log.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serialization\Serializer.cs" />
+    <Compile Include="Strings\FlatConfiguration.cs" />
+    <Compile Include="Strings\StringHelpers.cs" />
+    <Compile Include="Strings\StringTokenizer.cs" />
+    <Compile Include="Strings\StringUtility.cs" />
+    <Compile Include="Strings\TemplateTextParser.cs" />
+    <Compile Include="WCF\BindingHelpers.cs" />
+    <Compile Include="WCF\MessageSizeQuotas.cs" />
+    <Compile Include="WCF\Message\Encoders\GZipEncoder\Encoding.cs" />
+    <Compile Include="WCF\Message\Encoders\GZipEncoder\GZipMessageEncoderFactory .cs" />
+    <Compile Include="WCF\Message\Encoders\GZipEncoder\GZipMessageEncodingBindingElement .cs" />
+    <Compile Include="WCF\Message\Encoders\GZipEncoder\GZipMessageEncodingBindingElementImporter.cs" />
+    <Compile Include="WCF\Message\Encoders\GZipEncoder\GZipMessageEncodingElement.cs" />
+    <Compile Include="WCF\Message\Encoders\GZipEncoder\MessageVersionConverter .cs" />
+    <Compile Include="WCF\Message\WcfMessageHelpers.cs" />
+    <Compile Include="WCF\SecurityHelpers.cs" />
+    <Compile Include="WCF\TimeoutQuotas.cs" />
+    <Compile Include="XML\XmlHelpers.cs" />
+    <Compile Include="XML\XmlUtility.cs" />
+    <Compile Include="XML\XmlXPathUtility.cs" />
+    <Compile Include="XML\XslExtensionFunctions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
