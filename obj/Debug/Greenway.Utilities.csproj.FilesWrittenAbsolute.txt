@@ -1,1 +1,0 @@
-/Users/mcuri/Documents/Workspace/Xamarin/Sirona.Utilities/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs

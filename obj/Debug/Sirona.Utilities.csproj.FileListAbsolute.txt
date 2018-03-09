@@ -1,5 +1,0 @@
-/Users/mcuri/Documents/Workspace/VisualStudio/Sirona.Utilities/obj/Debug/Sirona.Utilities.csproj.CoreCompileInputs.cache
-/Users/mcuri/Documents/Workspace/VisualStudio/Sirona.Utilities/bin/Debug/Sirona.Utilities.dll
-/Users/mcuri/Documents/Workspace/VisualStudio/Sirona.Utilities/bin/Debug/Sirona.Utilities.pdb
-/Users/mcuri/Documents/Workspace/VisualStudio/Sirona.Utilities/obj/Debug/Sirona.Utilities.dll
-/Users/mcuri/Documents/Workspace/VisualStudio/Sirona.Utilities/obj/Debug/Sirona.Utilities.pdb
